@@ -22,7 +22,8 @@
 #define SE_PLUS KC_MINS         // +
 #define SE_QM   S(SE_PLUS)      // ?
 #define SE_ACUT KC_EQL          // ´
-#define SE_APOS  KC_BSLS        // '
+#define SE_BTIC S(A(SE_ACUT))   // `
+#define SE_APOS KC_BSLS         // '
 #define SE_ASTR S(SE_APOS)      // *
 #define SE_QUOT S(KC_2)         // "
 #define SE_AA   KC_LBRC         // å
@@ -90,11 +91,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [1] = LAYOUT_preonic_grid( \
-  SE_DEG,  _______, _______, SE_LT,   SE_GT,   _______, _______,    _______,    KC_MUTE,  KC_VOLD,    KC_VOLU, SE_UMLA,  \
-  _______, KC_EXLM, SE_SLSH, SE_LBR,  SE_RBR,  SE_ACUT, A(KC_LEFT), KC_PGDN,    KC_PGUP,  A(KC_RGHT), SE_CIRC, SE_TILD,  \
-  _______, SE_AT,   SE_DLR,  SE_LPRN, SE_RPRN, SE_QUOT, SE_EQL,     _______,    _______,  _______,    SE_ASTR, _______,  \
-  KC_LSFT, SE_QM,   KC_HASH, SE_LCBR, SE_RCBR, SE_APOS, SE_PERC,    SE_AMPR,    SE_LT,    SE_GT,      SE_PIPE, _______,  \
-  KC_LALT, KC_LCTL, KC_LCTL, KC_LGUI, _______, KC_ESC,  KC_BSPC,    KC_BSPC,    KC_TAB,   KC_ESC,     _______, MO(3)     \
+  SE_DEG,  _______, _______, SE_LT,   SE_GT,   _______, _______,    _______,    KC_MUTE,  KC_VOLD,    KC_VOLU, SE_UMLA, \
+  _______, KC_EXLM, SE_SLSH, SE_LBR,  SE_RBR,  SE_BTIC, A(KC_LEFT), KC_PGDN,    KC_PGUP,  A(KC_RGHT), SE_CIRC, SE_TILD, \
+  _______, SE_AT,   SE_DLR,  SE_LPRN, SE_RPRN, SE_QUOT, SE_EQL,     _______,    _______,  _______,    SE_ASTR, SE_ACUT, \
+  KC_LSFT, SE_QM,   KC_HASH, SE_LCBR, SE_RCBR, SE_APOS, SE_PERC,    SE_AMPR,    SE_LT,    SE_GT,      SE_PIPE, _______, \
+  KC_LALT, KC_LCTL, KC_LCTL, KC_LGUI, _______, KC_ESC,  KC_BSPC,    KC_BSPC,    KC_TAB,   KC_ESC,     _______, MO(3)    \
 ),
 
 /*
