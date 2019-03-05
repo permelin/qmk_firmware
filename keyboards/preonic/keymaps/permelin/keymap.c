@@ -22,8 +22,8 @@
 #define SE_PLUS KC_MINS         // +
 #define SE_QM   S(SE_PLUS)      // ?
 #define SE_ACUT KC_EQL          // ´
-#define SE_AMP  KC_BSLS         // '
-#define SE_ASTR S(SE_AMP)       // *
+#define SE_APOS  KC_BSLS        // '
+#define SE_ASTR S(SE_APOS)      // *
 #define SE_QUOT S(KC_2)         // "
 #define SE_AA   KC_LBRC         // å
 #define SE_OE   KC_SCLN         // ö
@@ -92,8 +92,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [1] = LAYOUT_preonic_grid( \
   SE_DEG,  _______, _______, SE_LT,   SE_GT,   _______, _______,    _______,    KC_MUTE,  KC_VOLD,    KC_VOLU, SE_UMLA,  \
   _______, KC_EXLM, SE_SLSH, SE_LBR,  SE_RBR,  SE_ACUT, A(KC_LEFT), KC_PGDN,    KC_PGUP,  A(KC_RGHT), SE_CIRC, SE_TILD,  \
-  _______, SE_AT,   SE_DLR,  SE_LPRN, SE_RPRN, SE_QUOT, KC_LEFT,    KC_DOWN,    KC_UP,    KC_RGHT,    SE_ASTR, _______,  \
-  KC_LSFT, SE_QM,   KC_HASH, SE_LCBR, SE_RCBR, SE_AMP,  SE_PERC,    SE_AMPR,    SE_LT,    SE_GT,      SE_PIPE, _______,  \
+  _______, SE_AT,   SE_DLR,  SE_LPRN, SE_RPRN, SE_QUOT, SE_EQL,     _______,    _______,  _______,    SE_ASTR, _______,  \
+  KC_LSFT, SE_QM,   KC_HASH, SE_LCBR, SE_RCBR, SE_APOS, SE_PERC,    SE_AMPR,    SE_LT,    SE_GT,      SE_PIPE, _______,  \
   KC_LALT, KC_LCTL, KC_LCTL, KC_LGUI, _______, KC_ESC,  KC_BSPC,    KC_BSPC,    KC_TAB,   KC_ESC,     _______, MO(3)     \
 ),
 
@@ -113,8 +113,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [2] = LAYOUT_preonic_grid( \
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, \
   _______, _______, KC_7,    KC_8,    KC_9,    _______, _______, _______, _______, _______, _______, _______, \
-  _______, KC_0,    KC_4,    KC_5,    KC_6,    _______, _______, SE_PLUS, SE_MINS, SE_ASTR, SE_SLSH, _______, \
-  _______, KC_0,    KC_1,    KC_2,    KC_3,    _______, _______, SE_EQL,  KC_COMM, KC_DOT,  SE_MINS, _______, \
+  _______, KC_0,    KC_4,    KC_5,    KC_6,    _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, _______, \
+  _______, KC_0,    KC_1,    KC_2,    KC_3,    _______, _______, SE_PLUS, SE_MINS, SE_ASTR, SE_SLSH, _______, \
   _______, _______, _______, _______, KC_ESC,  _______, KC_SPC,  KC_SPC,  _______, _______, _______, _______  \
 ),
 
