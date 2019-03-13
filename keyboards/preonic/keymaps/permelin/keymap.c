@@ -51,6 +51,8 @@
 
 #define MY_ENT  LSFT_T(KC_ENT)
 #define MY_SPC  LSFT_T(KC_SPC)
+#define MY_ALFT A(KC_LEFT)
+#define MY_ARGT A(KC_RGHT)
 
 #define MT_LSFT OSM(MOD_LSFT)
 
@@ -74,7 +76,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC, \
   KC_ESC,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, \
   MT_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  SE_MINS, MY_ENT,  \
-  KC_LALT, KC_LALT, KC_LCTL, KC_LGUI, MO(1),   MO(2),   KC_SPC,  KC_SPC,  MY_ENT,  KC_RCTL, _______, _______  \
+  KC_LALT, KC_LALT, KC_LCTL, KC_LGUI, MO(1),   MO(1),   KC_SPC,  KC_SPC,  MO(2),   KC_RCTL, _______, _______  \
 ),
 
 /*
@@ -91,8 +93,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [1] = LAYOUT_preonic_grid( \
-  SE_DEG,  _______, _______, SE_LT,   SE_GT,   _______, _______,    _______,    KC_MUTE,  KC_VOLD,    KC_VOLU, SE_UMLA, \
-  _______, KC_EXLM, SE_SLSH, SE_LBR,  SE_RBR,  SE_BTIC, A(KC_LEFT), KC_PGDN,    KC_PGUP,  A(KC_RGHT), SE_CIRC, SE_TILD, \
+  SE_DEG,  _______, _______, _______, _______, _______, _______,    _______,    KC_MUTE,  KC_VOLD,    KC_VOLU, SE_UMLA, \
+  _______, KC_EXLM, SE_SLSH, SE_LBR,  SE_RBR,  SE_BTIC, _______,    KC_PGDN,    KC_PGUP,  A(KC_RGHT), SE_CIRC, SE_TILD, \
   _______, SE_AT,   SE_DLR,  SE_LPRN, SE_RPRN, SE_QUOT, SE_EQL,     _______,    _______,  _______,    SE_ASTR, SE_ACUT, \
   KC_LSFT, SE_QM,   KC_HASH, SE_LCBR, SE_RCBR, SE_APOS, SE_PERC,    SE_AMPR,    SE_LT,    SE_GT,      SE_PIPE, _______, \
   KC_LALT, KC_LCTL, KC_LCTL, KC_LGUI, _______, KC_ESC,  KC_BSPC,    KC_BSPC,    KC_TAB,   KC_ESC,     _______, MO(3)    \
@@ -114,9 +116,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [2] = LAYOUT_preonic_grid( \
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, \
   _______, _______, KC_7,    KC_8,    KC_9,    _______, _______, _______, _______, _______, _______, _______, \
-  _______, KC_0,    KC_4,    KC_5,    KC_6,    _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, _______, \
-  _______, KC_0,    KC_1,    KC_2,    KC_3,    _______, _______, SE_PLUS, SE_MINS, SE_ASTR, SE_SLSH, _______, \
-  _______, _______, _______, _______, KC_ESC,  _______, KC_SPC,  KC_SPC,  _______, _______, _______, _______  \
+  _______, SE_ASTR, KC_4,    KC_5,    KC_6,    KC_PLUS, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, _______, \
+  _______, SE_SLSH, KC_1,    KC_2,    KC_3,    KC_MINS, MY_ALFT, _______, _______, MY_ARGT, _______, _______, \
+  _______, _______, _______, _______, KC_0,    _______, KC_SPC,  KC_SPC,  _______, _______, _______, _______  \
 ),
 
 /* Adjust
