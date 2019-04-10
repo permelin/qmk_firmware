@@ -49,12 +49,12 @@
 #define SE_AT   A(KC_2)         // @
 #define SE_DLR  A(KC_4)         // $
 
-#define MY_ENT  LSFT_T(KC_ENT)
-#define MY_SPC  LSFT_T(KC_SPC)
-#define MY_ALFT A(KC_LEFT)
-#define MY_ARGT A(KC_RGHT)
+#define SFT_ENT LSFT_T(KC_ENT)
+#define GUI_ESC LGUI_T(KC_ESC)
+#define ALT_L   A(KC_LEFT)
+#define ALT_R   A(KC_RGHT)
 
-#define MT_LSFT OSM(MOD_LSFT)
+#define OS_LSFT OSM(MOD_LSFT)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -74,9 +74,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [0] = LAYOUT_preonic_grid( \
   KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    SE_PLUS, \
   KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC, \
-  KC_ESC,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, \
-  MT_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  SE_MINS, MY_ENT,  \
-  KC_LALT, KC_LALT, KC_LCTL, KC_LGUI, MO(1),   MO(1),   KC_SPC,  KC_SPC,  MO(2),   KC_RCTL, _______, _______  \
+  OS_LSFT, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, \
+  OS_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  SE_MINS, KC_ENT,  \
+  KC_LALT, KC_LALT, KC_LCTL, GUI_ESC, SFT_ENT, MO(1),   KC_SPC,  KC_SPC,  MO(2),   _______, _______, _______  \
 ),
 
 /*
@@ -97,7 +97,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______, KC_EXLM, SE_SLSH, SE_LBR,  SE_RBR,  SE_BTIC, _______, KC_PGDN, KC_PGUP, _______, SE_CIRC, SE_TILD, \
   _______, SE_AT,   SE_DLR,  SE_LPRN, SE_RPRN, SE_QUOT, SE_EQL,  SE_PLUS, _______, _______, SE_ASTR, SE_ACUT, \
   KC_LSFT, SE_QM,   KC_HASH, SE_LCBR, SE_RCBR, SE_APOS, SE_PERC, SE_AMPR, SE_LT,   SE_GT,   SE_PIPE, _______, \
-  KC_LALT, KC_LCTL, KC_LCTL, KC_LGUI, _______, KC_ESC,  KC_BSPC, KC_BSPC, KC_TAB,  KC_ESC,  _______, MO(3)    \
+  KC_LALT, KC_LCTL, KC_LCTL, KC_LGUI, _______, _______, KC_BSPC, KC_BSPC, _______, _______, _______, MO(3)    \
 ),
 
 /*
@@ -117,8 +117,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, \
   _______, _______, KC_7,    KC_8,    KC_9,    _______, _______, _______, _______, _______, _______, _______, \
   _______, SE_ASTR, KC_4,    KC_5,    KC_6,    SE_PLUS, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, _______, \
-  _______, SE_SLSH, KC_1,    KC_2,    KC_3,    SE_MINS, MY_ALFT, _______, _______, MY_ARGT, _______, _______, \
-  _______, _______, _______, _______, _______, KC_0,    KC_SPC,  KC_SPC,  _______, _______, _______, _______  \
+  _______, SE_SLSH, KC_1,    KC_2,    KC_3,    SE_MINS, ALT_L,   _______, _______, ALT_R,   _______, _______, \
+  _______, _______, _______, KC_ESC,  KC_0,    KC_0,    KC_SPC,  KC_SPC,  _______, _______, _______, _______  \
 ),
 
 /* Adjust
